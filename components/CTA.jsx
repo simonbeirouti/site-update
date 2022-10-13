@@ -1,7 +1,13 @@
-import Link from "next/link";
 import Image from "next/image";
+import { useState } from "react";
 
 export default function CTA() {
+  const [showForm, setShowForm] = useState(false);
+
+  const handleClick = () => {
+    setShowForm(!showForm);
+  };
+
   return (
     <section className="py-10 bg-white sm:py-16 lg:py-24">
       <div className="px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl">
@@ -28,14 +34,34 @@ export default function CTA() {
             it.
           </p>
           <div className="flex flex-col items-center justify-center mt-10 space-y-4 sm:flex-row sm:space-y-0 sm:space-x-4">
-            <Link href="">
+            {!showForm ? (
               <button
                 type="button"
                 className="inline-flex items-center justify-center px-6 py-4 text-base font-semibold leading-5 transition-all duration-200 bg-orange-300 border border-transparent rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-600 hover:bg-red-500 text-black"
+                onClick={handleClick}
               >
                 Access now
               </button>
-            </Link>
+            ) : (
+              <form action="#" method="POST">
+                <button
+                  type="submit"
+                  className="inline-flex items-center justify-center px-6 py-4 text-base font-semibold leading-5 transition-all duration-200 bg-orange-300 border border-transparent rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-600 hover:bg-red-500 text-black"
+                >
+                  Access now
+                </button>
+                <div className="w-96">
+                  <input
+                    type="email"
+                    name="email"
+                    id="email"
+                    required="true"
+                    placeholder="Email address"
+                    className="block w-full py-4 pl-4 mt-4 text-base text-gray-900 border border-gray-200 rounded-xl bg-gray-50 focus:bg-white focus:outline-none focus:border-blue-600 focus:ring-1 focus:ring-blue-600"
+                  />
+                </div>
+              </form>
+            )}
           </div>
         </div>
       </div>
