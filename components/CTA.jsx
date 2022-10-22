@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { useState, useEffect } from "react";
+import { supabase } from "../utils/supabase";
 
 export default function CTA() {
   const initValues = { email: "" };
@@ -18,12 +19,14 @@ export default function CTA() {
     setFormValues({ ...formValues, [name]: value });
   };
 
-  const handleSubmit = (e) => {
+  async function handleSubmit(e) {
     e.preventDefault();
     setFormErrors(validate(formValues));
     setIsSubmit(true);
+    const email = e.target.email.value;
+    await supabase.auth.signInWithOtp({ email });
     initValues.email = "";
-  };
+  }
 
   useEffect(() => {
     console.log(formErrors);
@@ -72,7 +75,7 @@ export default function CTA() {
             {!showForm ? (
               <button
                 type="button"
-                className="inline-flex items-center justify-center px-6 py-4 text-base font-semibold leading-5 transition-all duration-200 bg-orange-300 border border-transparent rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-600 hover:bg-red-500 text-black"
+                className="inline-flex items-center justify-center px-6 py-4 text-base font-semibold leading-5 transition-all duration-200 bg-orange-300 border border-transparent rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-600 hover:bg-red-400 text-black"
                 onClick={handleClick}
               >
                 Access now
@@ -81,7 +84,7 @@ export default function CTA() {
               <form action="#" method="POST" onSubmit={handleSubmit}>
                 <button
                   type="submit"
-                  className="inline-flex items-center justify-center px-6 py-4 text-base font-semibold leading-5 transition-all duration-200 bg-orange-300 border border-transparent rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-600 hover:bg-red-500 text-black"
+                  className="inline-flex items-center justify-center px-6 py-4 text-base font-semibold leading-5 transition-all duration-200 bg-orange-300 border border-transparent rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-600 hover:bg-red-400 text-black"
                 >
                   Access now
                 </button>
