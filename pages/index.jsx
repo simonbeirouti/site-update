@@ -1,13 +1,19 @@
-import MetaHead from "../components/MetaHead";
+import MetaHead from "../components/utilities/MetaHead";
+import Hero from "../components/Hero";
+import Content from "../components/Content";
 
 export default function Home() {
   return (
-    <div className="flex min-h-screen flex-col items-center justify-center py-2">
+    <>
       <MetaHead
         title="Simon Beirouti | Home"
         description="This is the home page"
       />
-      <p>Home page</p>
-    </div>
+      <Hero
+        intro="Welcome and thank you for visiting my website."
+        text="Recent updates for you below!"
+      />
+      <Content />
+    </>
   );
 }
