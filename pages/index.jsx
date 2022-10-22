@@ -1,5 +1,4 @@
 import MetaHead from "../components/MetaHead";
-import CTA from "../components/CTA";
 
 export default function Home() {
   return (
@@ -8,7 +7,7 @@ export default function Home() {
         title="Simon Beirouti | Home"
         description="This is the home page"
       />
-      <CTA />
+      <p>Home page</p>
     </div>
   );
 }
