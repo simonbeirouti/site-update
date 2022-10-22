@@ -15,7 +15,7 @@ function MyApp({ Component, pageProps }) {
       supabaseClient={supabaseClient}
       initialSession={pageProps.initialSession}
     >
-      {session ? (
+      {!session ? (
         <CTA />
       ) : (
         <Layout>
