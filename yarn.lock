@@ -33,6 +33,25 @@
     "@nodelib/fs.scandir" "2.1.5"
     "fastq" "^1.6.0"
 
+"@supabase/auth-helpers-nextjs@^0.4.1":
+  "integrity" "sha512-qrtMYlLoxm/Xf2U1l+OeDlckEzQHbRusIRcj5JKOj+gV/r62/VkDpB92cgjt3bbVtPDka5szXF4tBku6ZZkMeQ=="
+  "resolved" "https://registry.npmjs.org/@supabase/auth-helpers-nextjs/-/auth-helpers-nextjs-0.4.1.tgz"
+  "version" "0.4.1"
+  dependencies:
+    "@supabase/auth-helpers-shared" "0.2.0"
+
+"@supabase/auth-helpers-react@^0.3.0":
+  "integrity" "sha512-yCJPUdtElPxmlk6FXZJdMWLnCuYU1qD7pzHxVjF+vO+NwddZ00qKTi53UJu83+H3QeDgZZrNR1ueCi/sLY+kYw=="
+  "resolved" "https://registry.npmjs.org/@supabase/auth-helpers-react/-/auth-helpers-react-0.3.0.tgz"
+  "version" "0.3.0"
+  dependencies:
+    "@supabase/auth-helpers-shared" "0.2.0"
+
+"@supabase/auth-helpers-shared@0.2.0":
+  "integrity" "sha512-GaWzuP3RjLSdSlFajbgwQkZO24A14DSEIJG5sUva/sUYWkriEWROjf8Vbwg4YsSxqeU6fP3lloFeync9BwgyYA=="
+  "resolved" "https://registry.npmjs.org/@supabase/auth-helpers-shared/-/auth-helpers-shared-0.2.0.tgz"
+  "version" "0.2.0"
+
 "@supabase/functions-js@^2.0.0":
   "integrity" "sha512-ozb7bds2yvf5k7NM2ZzUkxvsx4S4i2eRKFSJetdTADV91T65g4gCzEs9L3LUXSrghcGIkUaon03VPzOrFredqg=="
   "resolved" "https://registry.npmjs.org/@supabase/functions-js/-/functions-js-2.0.0.tgz"
