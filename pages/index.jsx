@@ -10,7 +10,7 @@ export default function Home() {
   return (
     <>
       <MetaHead
-        title="Simon Beirouti | Staging"
+        title="Simon Beirouti | Home"
         description="This is the home page"
       />
       {!session ? (
