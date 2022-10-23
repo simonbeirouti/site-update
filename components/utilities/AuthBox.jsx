@@ -10,7 +10,18 @@ export default function AuthBox() {
       <div className="max-w-md mx-auto content-center p-10 ">
         <Auth
           supabaseClient={supabase}
-          appearance={{ theme: ThemeSupa }}
+          appearance={{
+            theme: ThemeSupa,
+            variables: {
+              default: {
+                colors: {
+                  brand: "orange",
+                  brandAccent: "red",
+                  brandButtonText: "black",
+                },
+              },
+            },
+          }}
           theme="light"
         />
       </div>
