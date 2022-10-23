@@ -1,6 +1,8 @@
 import Image from "next/image";
+import { useRouter } from "next/router";
 
 export default function CTA() {
+  const router = useRouter();
   return (
     <section className="pt-10 bg-white">
       <div className="px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl">
@@ -16,15 +18,30 @@ export default function CTA() {
               />
             </div>
           </div>
-          <h2 className="mt-8 text-3xl font-bold leading-tight text-black lg:mt-12 sm:text-4xl lg:text-5xl">
-            Welcome! I am{" "}
-            <span className="border-b-8 border-orange-300">Simon</span>.
-          </h2>
-          <p className="max-w-xl mx-auto mt-6 text-xl text-gray-600 md:mt-10">
-            I'm on a mission to build things that make a difference. I've
-            started with my own site! You'll need to create an account to access
-            it.
-          </p>
+          {router.pathname === "/404" ? (
+            <>
+              <h2 className="mt-8 text-3xl font-bold leading-tight text-black lg:mt-12 sm:text-4xl lg:text-5xl">
+                404! I am{" "}
+                <span className="border-b-8 border-orange-300">404</span>.
+              </h2>
+              <p className="max-w-xl mx-auto mt-6 text-xl text-gray-600 md:mt-10">
+                You have reached a page that isn't accessible and you're not
+                authenticated! Complete the form below to get access.
+              </p>
+            </>
+          ) : (
+            <>
+              <h2 className="mt-8 text-3xl font-bold leading-tight text-black lg:mt-12 sm:text-4xl lg:text-5xl">
+                Welcome! I am{" "}
+                <span className="border-b-8 border-orange-300">Simon</span>.
+              </h2>
+              <p className="max-w-xl mx-auto mt-6 text-xl text-gray-600 md:mt-10">
+                I'm on a mission to build things that make a difference. I've
+                started with my own site! You'll need to create an account to
+                access it.
+              </p>
+            </>
+          )}
         </div>
       </div>
     </section>
