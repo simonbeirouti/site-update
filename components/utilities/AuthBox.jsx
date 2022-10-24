@@ -7,7 +7,7 @@ export default function AuthBox() {
   return (
     <>
       <CTA />
-      <div className="max-w-md mx-auto content-center p-10 ">
+      <div className="max-w-lg mx-auto content-center p-4">
         <Auth
           supabaseClient={supabase}
           appearance={{
