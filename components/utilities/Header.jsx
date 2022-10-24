@@ -18,6 +18,10 @@ const links = [
 
 const secondaryLinks = [
   {
+    label: `Profile`,
+    href: `/profile`,
+  },
+  {
     label: `Sign out`,
     href: `#`,
   },
@@ -133,11 +137,13 @@ export default function Header() {
           </div>
           <div className="hidden md:block">
             <div className="hidden md:ml-auto sm:flex md:items-center md:space-x-4 xl:space-x-6">
-              <Link href="#" title="">
-                <a className="px-5 py-2 text-base font-bold leading-7 text-black transition-all duration-200 bg-gray-100 border rounded-xl hover:bg-gray-600 hover:text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-900">
-                  Sign out
-                </a>
-              </Link>
+              {secondaryLinks.map(({ label, href }) => (
+                <Link href={href}>
+                  <a className="px-5 py-2 text-base font-bold leading-7 text-black transition-all duration-200 bg-gray-100 border rounded-xl hover:bg-gray-600 hover:text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-900">
+                    {label}
+                  </a>
+                </Link>
+              ))}
             </div>
           </div>
           <div className="-mr-2 flex md:hidden">
