@@ -64,8 +64,8 @@ export default function Account({ session }) {
   }
 
   return (
-    <form className="max-w-xl mx-auto mt-12">
-      <div>
+    <form className="max-w-xl mx-auto p-6">
+      <div className="my-6">
         <label htmlFor="email" className="text-base font-medium text-gray-900">
           Email
         </label>
@@ -77,7 +77,7 @@ export default function Account({ session }) {
           disabled
         />
       </div>
-      <div>
+      <div className="my-6">
         <label
           htmlFor="username"
           className="text-base font-medium text-gray-900"
@@ -92,7 +92,7 @@ export default function Account({ session }) {
           onChange={(e) => setUsername(e.target.value)}
         />
       </div>
-      <div>
+      <div className="my-6">
         <label
           htmlFor="website"
           className="text-base font-medium text-gray-900"
@@ -108,7 +108,7 @@ export default function Account({ session }) {
         />
       </div>
 
-      <div className="flex justify-evenly">
+      <div className="flex my-5 justify-evenly">
         <div>
           <button
             className="inline-flex items-center justify-center px-6 py-4 text-base font-semibold leading-5 transition-all duration-200 bg-orange-300 border border-transparent rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-600 hover:bg-red-500 text-black"
