@@ -3,6 +3,7 @@ import MetaHead from "../components/utilities/MetaHead";
 import Hero from "../components/Hero";
 import Header from "../components/utilities/Header";
 import AuthBox from "../components/utilities/AuthBox";
+import HomeContent from "../components/HomeContent";
 
 export default function Home() {
   const session = useSession();
@@ -18,6 +19,7 @@ export default function Home() {
         <>
           <Header />
           <Hero intro="Lives updates" text="Recent updates for you below!" />
+          <HomeContent />
         </>
       )}
     </>
