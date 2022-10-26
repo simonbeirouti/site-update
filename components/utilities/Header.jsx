@@ -16,16 +16,16 @@ const links = [
   },
 ];
 
-// const secondaryLinks = [
-//   {
-//     label: `Profile`,
-//     href: `/profile`,
-//   },
-//   {
-//     label: `Sign out`,
-//     href: `#`,
-//   },
-// ];
+const secondaryLinks = [
+  {
+    label: `Profile`,
+    href: `/profile`,
+  },
+  {
+    label: `Sign out`,
+    href: `#`,
+  },
+];
 
 const MenuButton = ({ toggleMenu, showMenu }) => (
   <button
@@ -87,7 +87,7 @@ const MobileMenu = () => (
         </Link>
       ))}
     </div>
-    {/* <div className="pt-4 pb-3 border-t border-gray-400">
+    <div className="pt-4 pb-3 border-t border-gray-400">
       <div className="px-2 space-y-1">
         {secondaryLinks.map(({ label, href }) => (
           <Link key={label} href={href}>
@@ -97,7 +97,7 @@ const MobileMenu = () => (
           </Link>
         ))}
       </div>
-    </div> */}
+    </div>
   </div>
 );
 
@@ -135,7 +135,7 @@ export default function Header() {
               </div>
             </div>
           </div>
-          {/* <div className="hidden md:block">
+          <div className="hidden md:block">
             <div className="hidden md:ml-auto sm:flex md:items-center md:space-x-4 xl:space-x-6">
               {secondaryLinks.map(({ label, href }) => (
                 <Link href={href}>
@@ -145,7 +145,7 @@ export default function Header() {
                 </Link>
               ))}
             </div>
-          </div> */}
+          </div>
           <div className="-mr-2 flex md:hidden">
             <MenuButton showMenu={showMenu} toggleMenu={toggleMenu} />
           </div>
