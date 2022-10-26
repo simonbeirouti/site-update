@@ -1,4 +1,4 @@
-import PostCard from "./resuse/PostCard";
+import PostCard from "./reuse/PostCard";
 
 const data = [
   {

@@ -1,4 +1,4 @@
-import ProjectCard from "./resuse/ProjectCard";
+import ProjectCard from "./reuse/ProjectCard";
 
 const data = [
   {

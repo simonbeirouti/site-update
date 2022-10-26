@@ -1,4 +1,4 @@
-import InterestCard from "./resuse/InterestCard";
+import InterestCard from "./reuse/InterestCard";
 
 const data = [
   {
