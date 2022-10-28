@@ -3,14 +3,14 @@ import MetaHead from "../components/utilities/MetaHead";
 import Hero from "../components/Hero";
 import Header from "../components/utilities/Header";
 import AuthBox from "../components/utilities/AuthBox";
-import InterestsList from "../components/InterestsList";
+import ExperienceList from "../components/ExperienceList";
 
-export default function Interests() {
+export default function Experience() {
   const session = useSession();
   return (
     <>
       <MetaHead
-        title="Simon Beirouti | Home"
+        title="Simon Beirouti | Experiences"
         description="This is the home page"
       />
       {!session ? (
@@ -19,10 +19,10 @@ export default function Interests() {
         <>
           <Header />
           <Hero
-            intro="My interests"
+            intro="Experiences"
             text="Truthful ratings on different things that I experience in life."
           />
-          <InterestsList />
+          <ExperienceList />
         </>
       )}
     </>

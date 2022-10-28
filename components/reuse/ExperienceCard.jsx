@@ -1,4 +1,4 @@
-export default function InterestCard({ status, summary, date, name }) {
+export default function ExperienceCard({ status, summary, date, name }) {
   return (
     <div className="grid grid-cols-3 py-4 gap-y-4 lg:gap-0 lg:grid-cols-6">
       <div className="col-span-2 px-4 lg:py-4 sm:px-6 lg:col-span-1">

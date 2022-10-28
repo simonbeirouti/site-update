@@ -12,8 +12,8 @@ const links = [
     href: `/projects`,
   },
   {
-    label: `Interests`,
-    href: `/interests`,
+    label: `Experiences`,
+    href: `/experiences`,
   },
 ];
 
