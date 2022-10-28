@@ -61,7 +61,7 @@ export default function PostsList() {
   return (
     <section className="py-6 sm:py-8 lg:py-10">
       <div className="px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl">
-        <div className="grid max-w-2xl grid-cols-1 gap-4 mx-auto mt-12 sm:gap-6 xl:max-w-none xl:grid-cols-2 sm:mt-12 lg:gap-8 lg:mt-20">
+        <div className="mt-12 grid max-w-2xl grid-cols-1 gap-4 mx-auto sm:gap-6 xl:max-w-none xl:grid-cols-2 ">
           {data.map((item) => (
             <PostCard
               key={item.title}

@@ -1,71 +1,90 @@
-export default function ExperienceCard({ status, summary, date, name }) {
+export default function ExperienceCard({ key, status, summary, date, name }) {
   return (
-    <div className="flex flex-col py-10 sm:flex-row sm:items-center group">
-      <a
-        href="#"
-        title=""
-        className="flex overflow-hidden shrink-0 rounded-xl "
-      >
-        <img
-          className="w-full transition-all duration-200 sm:w-auto sm:h-32 object-cvoer group-hover:scale-110"
-          src="https://landingfoliocom.imgix.net/store/collection/saasui/images/blog/2/blog-thumbnail-1.png"
-          alt=""
-        />
-      </a>
-
-      <div className="flex-1 mt-6 sm:mt-0 sm:ml-6 lg:ml-8">
-        <h3 className="max-w-xs text-xl font-semibold text-black">
-          <a href="#" title="">
-            {summary}
-          </a>
-        </h3>
-        <p className="mt-2 text-sm font-medium text-gray-400">{name}</p>
-      </div>
-
-      <div className="mt-2 sm:mt-0 sm:ml-6">
-        <p className="inline-flex items-center justify-center text-sm font-medium text-gray-400">
-          {date}
-        </p>
-      </div>
-
-      <div className="mt-2 sm:mt-0 sm:ml-6">
-        {status === "High" && (
-          <div className="mt-6 sm:mt-0 sm:ml-6">
-            <a
-              href="#"
-              title=""
-              className="inline-flex items-center justify-center px-6 py-3 text-base font-medium text-green-900 bg-green-200 transition-all duration-200 rounded-full hover:bg-green-300 hover:text-black focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-600"
-              role="button"
-            >
-              Read more
-            </a>
+    <>
+      {status === "High" && (
+        <div
+          className="relative mt-12 flex flex-col overflow-hidden bg-green-100 rounded-xl group"
+          key={key}
+        >
+          <div className="flex-shrink-0 overflow-hidden aspect-w-1 aspect-h-1">
+            <img
+              className="object-cover w-full h-full transition-all duration-300 group-hover:scale-125"
+              src="https://cdn.rareblocks.xyz/collection/clarity-ecommerce/images/item-cards/3/product-1.png"
+              alt=""
+            />
           </div>
-        )}
-        {status === "Medium" && (
-          <div className="mt-6 sm:mt-0 sm:ml-6">
-            <a
-              href="#"
-              title=""
-              className="inline-flex items-center justify-center px-6 py-3 text-base font-medium text-yellow-900 bg-yellow-200 transition-all duration-200 rounded-full hover:bg-yellow-300 hover:text-black focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-600"
-              role="button"
-            >
-              Read more
-            </a>
+          <div className="flex flex-col flex-1 px-4 py-5 sm:px-5 sm:py-6">
+            <p className="text-xs font-bold tracking-wide text-gray-400 uppercase">
+              {name}
+            </p>
+            <h3 className="text-sm sm:text-base font-bold text-gray-900 flex-1 mt-2.5">
+              <a href="#" title="">
+                {summary}
+                <span className="absolute inset-0" aria-hidden="true"></span>
+              </a>
+            </h3>
+            <p className="text-sm sm:text-base text-gray-400 font-bold mt-2.5">
+              {date}
+            </p>
           </div>
-        )}
-        {status === "Low" && (
-          <div className="mt-6 sm:mt-0 sm:ml-6">
-            <a
-              href="#"
-              title=""
-              className="inline-flex items-center justify-center px-6 py-3 text-base font-medium text-red-900 bg-red-200 transition-all duration-200 rounded-full hover:bg-red-300 hover:text-black focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-600"
-              role="button"
-            >
-              Read more
-            </a>
+        </div>
+      )}
+      {status === "Medium" && (
+        <div
+          className="relative mt-12 flex flex-col overflow-hidden bg-orange-100 rounded-xl group"
+          key={key}
+        >
+          <div className="flex-shrink-0 overflow-hidden aspect-w-1 aspect-h-1">
+            <img
+              className="object-cover w-full h-full transition-all duration-300 group-hover:scale-125"
+              src="https://cdn.rareblocks.xyz/collection/clarity-ecommerce/images/item-cards/3/product-1.png"
+              alt=""
+            />
           </div>
-        )}
-      </div>
-    </div>
+          <div className="flex flex-col flex-1 px-4 py-5 sm:px-5 sm:py-6">
+            <p className="text-xs font-bold tracking-wide text-gray-400 uppercase">
+              {name}
+            </p>
+            <h3 className="text-sm sm:text-base font-bold text-gray-900 flex-1 mt-2.5">
+              <a href="#" title="">
+                {summary}
+                <span className="absolute inset-0" aria-hidden="true"></span>
+              </a>
+            </h3>
+            <p className="text-sm sm:text-base text-gray-400 font-bold mt-2.5">
+              {date}
+            </p>
+          </div>
+        </div>
+      )}
+      {status === "Low" && (
+        <div
+          className="relative mt-12 flex flex-col overflow-hidden bg-red-100 rounded-xl group"
+          key={key}
+        >
+          <div className="flex-shrink-0 overflow-hidden aspect-w-1 aspect-h-1">
+            <img
+              className="object-cover w-full h-full transition-all duration-300 group-hover:scale-125"
+              src="https://cdn.rareblocks.xyz/collection/clarity-ecommerce/images/item-cards/3/product-1.png"
+              alt=""
+            />
+          </div>
+          <div className="flex flex-col flex-1 px-4 py-5 sm:px-5 sm:py-6">
+            <p className="text-xs font-bold tracking-wide text-gray-400 uppercase">
+              {name}
+            </p>
+            <h3 className="text-sm sm:text-base font-bold text-gray-900 flex-1 mt-2.5">
+              <a href="#" title="">
+                {summary}
+                <span className="absolute inset-0" aria-hidden="true"></span>
+              </a>
+            </h3>
+            <p className="text-sm sm:text-base text-gray-400 font-bold mt-2.5">
+              {date}
+            </p>
+          </div>
+        </div>
+      )}
+    </>
   );
 }
