@@ -1,77 +1,70 @@
 export default function ExperienceCard({ status, summary, date, name }) {
   return (
-    <div className="grid grid-cols-3 py-4 gap-y-4 lg:gap-0 lg:grid-cols-6">
-      <div className="col-span-2 px-4 lg:py-4 sm:px-6 lg:col-span-1">
+    <div className="flex flex-col py-10 sm:flex-row sm:items-center group">
+      <a
+        href="#"
+        title=""
+        className="flex overflow-hidden shrink-0 rounded-xl "
+      >
+        <img
+          className="w-full transition-all duration-200 sm:w-auto sm:h-32 object-cvoer group-hover:scale-110"
+          src="https://landingfoliocom.imgix.net/store/collection/saasui/images/blog/2/blog-thumbnail-1.png"
+          alt=""
+        />
+      </a>
+
+      <div className="flex-1 mt-6 sm:mt-0 sm:ml-6 lg:ml-8">
+        <h3 className="max-w-xs text-xl font-semibold text-black">
+          <a href="#" title="">
+            {summary}
+          </a>
+        </h3>
+        <p className="mt-2 text-sm font-medium text-gray-400">{name}</p>
+      </div>
+
+      <div className="mt-2 sm:mt-0 sm:ml-6">
+        <p className="inline-flex items-center justify-center text-sm font-medium text-gray-400">
+          {date}
+        </p>
+      </div>
+
+      <div className="mt-2 sm:mt-0 sm:ml-6">
         {status === "High" && (
-          <span className="text-xs font-medium text-green-900 bg-green-100 rounded-full inline-flex items-center px-2.5 py-1">
-            <svg
-              className="-ml-1 mr-1.5 h-2.5 w-2.5 text-green-500"
-              fill="currentColor"
-              viewBox="0 0 8 8"
+          <div className="mt-6 sm:mt-0 sm:ml-6">
+            <a
+              href="#"
+              title=""
+              className="inline-flex items-center justify-center px-6 py-3 text-base font-medium text-green-900 bg-green-200 transition-all duration-200 rounded-full hover:bg-green-300 hover:text-black focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-600"
+              role="button"
             >
-              <circle cx="4" cy="4" r="3" />
-            </svg>
-            {status}
-          </span>
+              Read more
+            </a>
+          </div>
         )}
         {status === "Medium" && (
-          <span className="text-xs font-medium text-yellow-900 bg-yellow-100 rounded-full inline-flex items-center px-2.5 py-1">
-            <svg
-              className="-ml-1 mr-1.5 h-2.5 w-2.5 text-yellow-400"
-              fill="currentColor"
-              viewBox="0 0 8 8"
+          <div className="mt-6 sm:mt-0 sm:ml-6">
+            <a
+              href="#"
+              title=""
+              className="inline-flex items-center justify-center px-6 py-3 text-base font-medium text-yellow-900 bg-yellow-200 transition-all duration-200 rounded-full hover:bg-yellow-300 hover:text-black focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-600"
+              role="button"
             >
-              <circle cx="4" cy="4" r="3" />
-            </svg>
-            {status}
-          </span>
+              Read more
+            </a>
+          </div>
         )}
         {status === "Low" && (
-          <span className="text-xs font-medium text-red-900 bg-red-100 rounded-full inline-flex items-center px-2.5 py-1">
-            <svg
-              className="-ml-1 mr-1.5 h-2.5 w-2.5 text-red-500"
-              fill="currentColor"
-              viewBox="0 0 8 8"
+          <div className="mt-6 sm:mt-0 sm:ml-6">
+            <a
+              href="#"
+              title=""
+              className="inline-flex items-center justify-center px-6 py-3 text-base font-medium text-red-900 bg-red-200 transition-all duration-200 rounded-full hover:bg-red-300 hover:text-black focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-600"
+              role="button"
             >
-              <circle cx="4" cy="4" r="3" />
-            </svg>
-            {status}
-          </span>
+              Read more
+            </a>
+          </div>
         )}
-      </div>
-
-      <div className="px-4 text-right lg:py-4 sm:px-6 lg:order-last">
-        <button
-          type="button"
-          className="inline-flex items-center justify-center w-8 h-8 text-gray-400 transition-all duration-200 bg-white rounded-full hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-600"
-        >
-          <svg
-            className="w-6 h-6"
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-            stroke-width="2"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              d="M5 12h.01M12 12h.01M19 12h.01M6 12a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0z"
-            />
-          </svg>
-        </button>
-      </div>
-
-      <div className="px-4 lg:py-4 sm:px-6 lg:col-span-2">
-        <p className="text-sm font-bold text-gray-900">{summary}</p>
-      </div>
-
-      <div className="px-4 lg:py-4 sm:px-6">
-        <p className="mt-1 text-sm font-medium text-gray-500">{date}</p>
-      </div>
-
-      <div className="px-4 lg:py-4 sm:px-6">
-        <p className="mt-1 text-sm font-medium text-gray-500">{name}</p>
       </div>
     </div>
   );

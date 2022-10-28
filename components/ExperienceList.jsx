@@ -40,24 +40,22 @@ const data = [
 
 export default function ExperienceList() {
   return (
-    <div className="py-12 bg-white sm:py-16 lg:py-20">
-      <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
-        <div className="max-w-4xl mx-auto">
-          <div className="overflow-hidden bg-white border border-gray-200 rounded-xl">
-            <div className="divide-y divide-gray-200">
-              {data.map((item) => (
-                <ExperienceCard
-                  key={item.name}
-                  status={item.status}
-                  summary={item.summary}
-                  date={item.date}
-                  name={item.name}
-                />
-              ))}
-            </div>
+    <section className="py-6 sm:py- lg:py-10 xl:py-12">
+      <div className="px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl">
+        <div className="flow-root max-w-5xl mx-auto mt-12 space-y-20 sm:mt-16 lg:mt-20">
+          <div className="-my-10 divide-y divide-gray-800">
+            {data.map((item) => (
+              <ExperienceCard
+                key={item.name}
+                status={item.status}
+                summary={item.summary}
+                date={item.date}
+                name={item.name}
+              />
+            ))}
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 }
