@@ -68,7 +68,7 @@ const MenuButton = ({ toggleMenu, showMenu }) => (
 
 const MobileMenu = () => (
   <div className="md:hidden">
-    <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+    <div className="px-2 py-2 space-y-1 sm:px-3">
       {links.map(({ label, href }) => (
         <Link key={label} href={href}>
           <a className="text-gray-500 block px-3 py-2 text-base font-medium hover:bg-gray-200 hover:rounded-md">
@@ -77,7 +77,7 @@ const MobileMenu = () => (
         </Link>
       ))}
     </div>
-    <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 border-t border-gray-400">
+    <div className="px-2 py-4 space-y-1 sm:px-3 border-t border-gray-400">
       <Link href="/profile">
         <a className=" text-black text-center block px-3 py-2 text-base font-medium bg-gray-100 border rounded-xl hover:bg-gray-600 hover:text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-900">
           Profile
