@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { useUser, useSupabaseClient } from "@supabase/auth-helpers-react";
+import Avatar from "./Avatar";
 
 export default function Account({ session }) {
   const supabase = useSupabaseClient();
@@ -65,6 +66,15 @@ export default function Account({ session }) {
 
   return (
     <form className="max-w-xl mx-auto p-6">
+      <Avatar
+        uid={user.id}
+        url={avatar_url}
+        size={150}
+        onUpload={(url) => {
+          setAvatarUrl(url);
+          updateProfile({ username, website, avatar_url: url });
+        }}
+      />
       <div className="my-6">
         <label htmlFor="email" className="text-base font-medium text-gray-900">
           Email
