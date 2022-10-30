@@ -70,18 +70,21 @@ const MobileMenu = () => (
   <div className="md:hidden">
     <div className="px-2 py-2 space-y-1 sm:px-3">
       {links.map(({ label, href }) => (
-        <Link key={label} href={href}>
-          <a className="text-gray-500 block px-3 py-2 text-base font-medium hover:bg-gray-200 hover:rounded-md">
-            {label}
-          </a>
+        <Link
+          key={label}
+          href={href}
+          className="text-gray-500 block px-3 py-2 text-base font-medium hover:bg-gray-200 hover:rounded-md"
+        >
+          {label}
         </Link>
       ))}
     </div>
     <div className="px-2 py-4 space-y-1 sm:px-3 border-t border-gray-400">
-      <Link href="/profile">
-        <a className=" text-black text-center block px-3 py-2 text-base font-medium bg-gray-100 border rounded-xl hover:bg-gray-600 hover:text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-900">
-          Profile
-        </a>
+      <Link
+        href="/profile"
+        className=" text-black text-center block px-3 py-2 text-base font-medium bg-gray-100 border rounded-xl hover:bg-gray-600 hover:text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-900"
+      >
+        Profile
       </Link>
     </div>
   </div>
@@ -118,10 +121,12 @@ export default function Header() {
             <div className="hidden md:block">
               <div className="ml-10 flex space-x-4">
                 {links.map(({ label, href }) => (
-                  <Link key={label} href={href}>
-                    <a className="text-gray-500 hover:text-gray-600 px-3 py-2 rounded-md font-medium">
-                      {label}
-                    </a>
+                  <Link
+                    key={label}
+                    href={href}
+                    className="text-gray-500 hover:text-gray-600 px-3 py-2 rounded-md font-medium"
+                  >
+                    {label}
                   </Link>
                 ))}
               </div>
@@ -129,18 +134,18 @@ export default function Header() {
           </div>
           <div className="hidden md:block">
             <div className="hidden md:ml-auto sm:flex md:items-center md:space-x-4 xl:space-x-6">
-              <Link href="/profile">
-                <a className="px-5 py-2 text-base font-bold leading-7 text-black transition-all duration-200 bg-gray-100 border rounded-xl hover:bg-gray-600 hover:text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-900">
-                  Profile
-                </a>
+              <Link
+                href="/profile"
+                className="px-5 py-2 text-base font-bold leading-7 text-black transition-all duration-200 bg-gray-100 border rounded-xl hover:bg-gray-600 hover:text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-900"
+              >
+                Profile
               </Link>
-              <Link href="#">
-                <a
-                  className="px-5 py-2 text-base font-bold leading-7 text-black transition-all duration-200 bg-gray-100 border rounded-xl hover:bg-gray-600 hover:text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-900"
-                  onClick={signOut}
-                >
-                  Sign out
-                </a>
+              <Link
+                href="#"
+                className="px-5 py-2 text-base font-bold leading-7 text-black transition-all duration-200 bg-gray-100 border rounded-xl hover:bg-gray-600 hover:text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-900"
+                onClick={signOut}
+              >
+                Sign out
               </Link>
             </div>
           </div>
